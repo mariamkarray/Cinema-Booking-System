@@ -1,0 +1,15 @@
+create table movies (
+id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+m_name varchar(50) not null,
+age_res int not null,
+rating float not null,
+category varchar(50) not null,
+lang varchar(50) not null
+);
+
+create table admins(
+id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+admin_name varchar(60) not null,
+username varchar(50) not null,
+admin_pass varchar(50) not null
+);
