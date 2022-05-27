@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Cinema.Models.movy>
+
+@{
+    ViewBag.Title = "Cinema Booking System";
+}
+<h3></h3>
+<p>
+    @Html.ActionLink("Admin", "admin")
+</p>
+<p>
+    @Html.ActionLink("Book A Movie", "Login")
+</p>
+
+
+<h2>Movies available in our Cinema</h2>
+
+<div>
+    <h2>
+        @Session["x"]
+    </h2>
+</div>
+<div>
+    <h2>
+        @Session["z"]
+    </h2>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.m_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age_res)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lang)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.m_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age_res)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lang)
+            </td>
+        </tr>
+    }
+
+</table>
